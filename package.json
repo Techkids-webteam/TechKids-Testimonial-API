@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thanhson1085/api-seed.git"
+    "url": "git+https://github.com/Techkids-webteam/TechKids-Testimonial-API.git"
   },
   "keywords": [
     "expresjs",
     "mongodb"
   ],
-  "author": "Nguyen Sy Thanh Son",
+  "author": "Nguyen Phuong Thao",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thanhson1085/api-seed/issues"
+    "url": "https://github.com/Techkids-webteam/TechKids-Testimonial-API/issues"
   },
-  "homepage": "https://github.com/thanhson1085/api-seed#readme",
+  "homepage": "https://github.com/Techkids-webteam/TechKids-Testimonial-API#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
     "config": "^1.19.0",

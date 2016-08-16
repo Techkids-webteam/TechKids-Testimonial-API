@@ -45,18 +45,26 @@ router.post('/create', function(req, res, next) {
     res.json(post);
   });
 });
+//
+// //update a C4E member
+// router.put('/update/:id', function(req, res) {
+//     db.C4E.findByIdAndUpdate(req.params.id, req.body, function(err, post) {
+//         if (err) return next(err);
+//         logger.debug('Update C4E A Member By Id', req.params.id);
+//         db.C4E.findOne({
+//             _id: req.params.id
+//         }).then(function(c4es) {
+//             res.send(JSON.stringify(c4es));
+//         }).catch(function(e) {
+//             res.status(500).send(JSON.stringify(e));
+//         });
+//     });
+// });
 
-//update a C4E member
-router.put('/update/:id', function(req, res) {
-    db.C4E.findByIdAndUpdate(req.params.id, req.body, function(err, post) {
-        if (err) return next(err);
-        logger.debug('Update C4E A Member By Id', req.params.id);
-        db.C4E.findOne({
-            _id: req.params.id
-        }).then(function(c4es) {
-            res.send(JSON.stringify(c4es));
-        }).catch(function(e) {
-            res.status(500).send(JSON.stringify(e));
-        });
-    });
+// delete a C4E member's Confesstion
+router.delete('/:id', function(req, res, next) {
+  C4E.findByIdAndRemove(req.params.id, req.body, function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
 });

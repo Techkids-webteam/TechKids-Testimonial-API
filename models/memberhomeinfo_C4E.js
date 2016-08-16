@@ -17,6 +17,14 @@ var C4E = new Schema({
     profile_src: {
         type: String,
         require: true
+    },
+    content: {
+        type: String,
+        require: true
+    },
+    background_src:{
+        type: String,
+        require:true
     }
 });
 
