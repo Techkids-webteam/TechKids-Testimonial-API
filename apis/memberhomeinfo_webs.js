@@ -7,6 +7,13 @@ var Web = require('../models/memberhomeinfo_WEB'),
 
 module.exports = router;
 
+// get listing
+router.get('/', function(req, res, next) {
+  db.Web.find(function (err, mads) {
+    if (err) return next(err);
+    res.json(mads);
+  });
+});
 // get a list of Web's member
 router.get('/list/:page/:limit', function(req, res) {
     var limit = (req.params.limit) ? req.params.limit : 10;

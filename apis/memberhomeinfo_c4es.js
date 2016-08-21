@@ -7,6 +7,13 @@ var C4E = require('../models/memberhomeinfo_C4E'),
 
 module.exports = router;
 
+// get listing
+router.get('/', function(req, res, next) {
+  db.C4E.find(function (err, mads) {
+    if (err) return next(err);
+    res.json(mads);
+  });
+});
 // get a list of c4e's member
 router.get('/list/:page/:limit', function(req, res) {
     var limit = (req.params.limit) ? req.params.limit : 10;
